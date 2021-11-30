@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* colors 
+
+bg #000
+orange #ff9501
+grey #161616
+white #fdfdfd */
+
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background: #333;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(120%);
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.zero {
+    width: 140px;
+}
+
+.calc-screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 120px;
+    padding: 10px;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
