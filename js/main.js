@@ -9,6 +9,8 @@ let finich = false;
 
 let namber = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 let action = ['-', '+', 'x', '/'];
+let namberOur = []; //
+let sum = 0; //
 
 function clearAll() {
     a = '' // первое число
@@ -20,6 +22,7 @@ function clearAll() {
 
 
 function Nabor(event) {
+    
     //нажата не кропка
     if (!event.target.classList.contains('btn')) {
         return;
@@ -39,6 +42,8 @@ function Nabor(event) {
             a += key;
             console.log(a, b, sing);
             calcScreen.textContent = a;
+            namberOur.push(+a); //
+            console.log(namberOur);
         } else if (a !== "" && b !== "" && finich) {
             b = key;
             finich = false;
@@ -47,6 +52,7 @@ function Nabor(event) {
             b += key;
             calcScreen.textContent = b;
         }
+        
         return;
     }
 
@@ -55,7 +61,12 @@ function Nabor(event) {
     if (action.includes(key)) {
         sing = key;
         calcScreen.textContent = sing;
+        namberOur.push(+b); //
+        namberOur.forEach((item) => sum += item); //
+        console.log(namberOur); //
+        console.log(sum); //
         return;
+        
     };
 
     //если нажата клавиша =
@@ -67,6 +78,7 @@ function Nabor(event) {
         switch (sing) {
             case "+":
                 a = (+a) + (+b);
+                b = +b;
                 break;
             case '-':
                 a = a - b;
@@ -84,8 +96,9 @@ function Nabor(event) {
                 }
                 a = a / b;
                 break;
-        }
+        } 
     }
+
     finich = true;
     calcScreen.textContent = a;
     console.log(a, b, sing);
