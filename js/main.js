@@ -22,7 +22,7 @@ function clearAll() {
 
 
 function Nabor(event) {
-    
+
     //нажата не кропка
     if (!event.target.classList.contains('btn')) {
         return;
@@ -52,7 +52,7 @@ function Nabor(event) {
             b += key;
             calcScreen.textContent = b;
         }
-        
+
         return;
     }
 
@@ -66,7 +66,7 @@ function Nabor(event) {
         console.log(namberOur); //
         console.log(sum); //
         return;
-        
+
     };
 
     //если нажата клавиша =
@@ -96,13 +96,15 @@ function Nabor(event) {
                 }
                 a = a / b;
                 break;
-        } 
+        }
     }
 
     finich = true;
     calcScreen.textContent = a;
     console.log(a, b, sing);
 }
+
+console.log('123');
 
 ac.addEventListener('click', clearAll);
 buttons.addEventListener('click', Nabor);
